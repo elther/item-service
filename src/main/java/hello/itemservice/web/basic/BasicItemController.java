@@ -50,7 +50,7 @@ public class BasicItemController {
     @PostMapping("/add")
     public String addItem(Item item){
         itemRepository.save(item);
-        return "basic/item";
+        return "redirect:/basic/items/"+item.getId();
     }
 
     @GetMapping("/add")
